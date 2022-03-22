@@ -41,11 +41,9 @@ public class PizzaDetailFragment extends Fragment {
     tvDetails = (TextView) view.findViewById(R.id.tvDetails);
 
     // update view
-    tvTitle.setText(Pizza.pizzaMenu[position]);
-    tvDetails.setText(Pizza.pizzaDetails[position]);
+    updateView(position);
   }
 
-  // Activity is calling this to update view on Fragment
   public void updateView(int position){
     tvTitle.setText(Pizza.pizzaMenu[position]);
     tvDetails.setText(Pizza.pizzaDetails[position]);

@@ -7,10 +7,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.codepath.mypizza.fragments.OnItemSelectedListener;
 import com.codepath.mypizza.fragments.PizzaDetailFragment;
 import com.codepath.mypizza.fragments.PizzaMenuFragment;
 
-public class MainActivity extends AppCompatActivity  implements PizzaMenuFragment.OnItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements OnItemSelectedListener {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {

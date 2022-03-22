@@ -1,8 +1,5 @@
 package com.codepath.mypizza.data;
 
-/**
- * Created by Shyam Rokde on 8/5/16.
- */
 public class Pizza {
 
   public static String[] pizzaMenu = {

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SaveDataSQLite.iml" filepath="$PROJECT_DIR$/.idea/modules/SaveDataSQLite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SaveDataSQLite.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SaveDataSQLite.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SaveDataSQLite.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SaveDataSQLite.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SaveDataSQLite.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SaveDataSQLite.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SaveDataSQLite.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SaveDataSQLite.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>

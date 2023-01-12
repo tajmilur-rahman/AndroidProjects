@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SaveDataSQLite</string>
+    <string name="user_log_book">User Log Book</string>
+    <string name="add">Add New User</string>
+    <string name="view">View Existing Users</string>
+    <string name="name">Name</string>
+</resources>

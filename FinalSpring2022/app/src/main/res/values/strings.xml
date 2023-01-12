@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FinalSpring2022</string>
+    <string name="notification_center">Notification Center</string>
+    <string name="notification">Notification</string>
+    <string name="notification_with_sound_text">Notification With Sound Text</string>
+    <string name="notification_with_sound_and_image">Notification with Sound and Image</string>
+</resources>

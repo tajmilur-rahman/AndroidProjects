@@ -20,6 +20,16 @@ public class MainActivity extends AppCompatActivity {
             EditText editText = findViewById(R.id.txtMessage);
             String message = editText.getText().toString();
             intent.putExtra(EXTRA_MESSAGE, message);
+
+            Bundle bundle = new Bundle();
+            bundle.putString("key", message);
+            bundle.putString("key", age);
+            bundle.putString("key", name);
+
+            String s = R.string.app_description;
+
+            intent.putExtras(bundle);
+
             startActivity(intent);
         });
     }

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RandomCodeGenerator</string>
+    <string name="roll">Roll</string>
+    <string name="button">Button</string>
+    <string name="about_this_game">About This Game</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="rolling_random_numbers">Rolling Random Numbers</string>
+    <string name="home">Home</string>
+    <string name="exit">Exit</string>
+</resources>

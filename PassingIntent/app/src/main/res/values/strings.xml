@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PassingIntent</string>
+    <string name="stop_notification">TRUE</string>
 </resources>

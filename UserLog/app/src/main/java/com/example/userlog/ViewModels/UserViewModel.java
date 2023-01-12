@@ -4,13 +4,14 @@ import android.content.Context;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
 import com.example.userlog.AbstractDatabase;
 import com.example.userlog.EntityClasses.User;
 
 import java.util.List;
 
-public class ViewModel {
+public class UserViewModel extends ViewModel {
 
     private LiveData<List<User>> users;
 

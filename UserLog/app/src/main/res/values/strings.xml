@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UserLog</string>
+    <string name="view_existing_users">View Existing Users</string>
+    <string name="user_log">User Log</string>
+    <string name="name">Name</string>
+    <string name="add_new_user">Add New User</string>
+</resources>

@@ -16,8 +16,6 @@ public class MainActivity extends AppCompatActivity {
     private NotificationManagerCompat notificationManagerCompat;
     private EditText edtTitle;
     private EditText edtMsg;
-    private Button btnSendOnCh1;
-    private Button btnSendOnCh2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,19 +25,21 @@ public class MainActivity extends AppCompatActivity {
         notificationManagerCompat = NotificationManagerCompat.from(this);
         edtTitle = findViewById(R.id.edtTitle);
         edtMsg = findViewById(R.id.edtMsg);
-        btnSendOnCh1 = findViewById(R.id.btnSendOnCh1);
-        btnSendOnCh2 = findViewById(R.id.btnSendOnCh2);
+        Button btnSendOnCh1 = findViewById(R.id.btnSendOnCh1);
+        Button btnSendOnCh2 = findViewById(R.id.btnSendOnCh2);
 
         // Notification action intent
         Intent notificationIntent = new Intent(this, LandingActivityFromNotification.class);
-        @SuppressLint("UnspecifiedImmutableFlag")
-        PendingIntent notificationPendingIntent =
-                PendingIntent.getActivity(this,
-                        1,
-                        notificationIntent,
-                        PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent notificationTapIntent = PendingIntent.getActivity(
+                this,
+                1,
+                notificationIntent,
+                PendingIntent.FLAG_MUTABLE
+        );
 
+        // Click on "Send on Channel 1" button
         btnSendOnCh1.setOnClickListener(l -> {
+            // Build notification
             Notification notification =
                     new NotificationCompat
                             .Builder(this, NotifyApplication.CHANNEL_1_ID)
@@ -48,17 +48,20 @@ public class MainActivity extends AppCompatActivity {
                             .setContentText(edtMsg.getText())
                             .setPriority(NotificationCompat.PRIORITY_HIGH)
                             .setCategory(NotificationCompat.CATEGORY_MESSAGE)
-                            .setContentIntent(notificationPendingIntent) // Set tap action
-                            .addAction(R.drawable.ic_baseline_reply_24, "Reply", notificationPendingIntent) // Set action button
+                            .setContentIntent(notificationTapIntent) // Set tap action
+                            .addAction(R.drawable.ic_baseline_reply_24, "Reply", notificationTapIntent) // Set action button
                             .setStyle(new NotificationCompat.BigTextStyle()
                                     .bigText(BigText.BIG_TEXT)
                                     .setBigContentTitle("The Detailed Description")
                             )
                             .build();
-            notificationManagerCompat.notify(1, notification);
+
+            // Notify
+            notificationManagerCompat.notify(1, notification );
         });
 
         btnSendOnCh2.setOnClickListener(l -> {
+            // Build notification
             Notification notification =
                     new NotificationCompat
                             .Builder(this, NotifyApplication.CHANNEL_2_ID)
@@ -68,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
                             .setPriority(NotificationCompat.PRIORITY_LOW)
                             .setCategory(NotificationCompat.CATEGORY_MESSAGE)
                             .build();
+
+            // Notify
             notificationManagerCompat.notify(2, notification);
         });
     }
